@@ -13,11 +13,23 @@
     async function getContent() {
       try {
         const response = await fetch('http://localhost:1234/')
+        const data = await response.json()
+        show(data)
+
       } catch (error) {
         console.error(error)
       }
     }
     getContent()
+
+    function show(user) {
+      let output = ''
+
+      for(let user of users) {
+        output += `<li>${user.name}</li>`
+      }
+      document.querySelector('main').innerHTML = output
+    }
   </script>
 </body>
 </html>

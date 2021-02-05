@@ -7,10 +7,9 @@ app.use(cors())
 app.get('/', (req, res) => {
   return res.json([
     {name: 'Daniel Ferreira'},
-    {idade: 25},
     {cidade: 'Bebedouro'},
     {estado: 'SP'}
   ]);
 });
 
-app.listen('1234')
+app.listen('4567')
